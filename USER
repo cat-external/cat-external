@@ -100,11 +100,7 @@ gg.clearResults()
 function MAS5()
 
  gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber("2.80259693e-44F;1.20000004768F;0.18000000715F;1.40129846e-45F", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 999, -999)
-gg.refineNumber("1.20000004968", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 999, -999)
-gg.getResults(500, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("729.000", gg.TYPE_FLOAT)
-gg.clearResults()
+
 gg.toast("SPEED RUN X3 ON")
 end
 
