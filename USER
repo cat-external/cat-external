@@ -5,29 +5,29 @@
 function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end -----------PERMISSION CODE
 
 
-gg.alert("★S P E E D HACK   ＡDＤ.  DONT USE REAL ACCOUNT★ IF YOU USE REAL ACCOUNT BLACKLIST AND BAN RISK ❌ TRY 1 DAY IN NOOB ACCOUNT THEN USE 2ND ACCOUNT 👻🚫")
+gg.alert(" SERVER ACTIVE✅ ")
 
-gg.alert(" ❌SERVER UPDATED❌ ^_^")
+gg.alert(" SNIPER AMMO COLUR 🟪 AND M24 🟡  ")
 
 -------------lobby------------
 
 function START()
 IG = gg.choice({
     " AWM SCOPE ⚔️ \n═════════════════════", ---IG 1
-	" FAST SWITCH ★ \n═════════════════════", ---IG 2
+	" FAST SWITCH ALL SNIPER (IF NOT WORK ON 2 TIMES ★ \n═════════════════════", ---IG 2
 	" INVISIBLE GLOO ⚡ \n═════════════════════", ---IG 3
-	" ᴛʜʀᴏɴᴇ ᴇᴍᴏᴛᴇ \n═════════════════════", ---IG 4
-	" SPEED RUN ( TEST )  ★ \n═════════════════════", ---IG 5
-	" GHOST MOVE 👻 EMOTE ♻️\n═════════════════════", ---IG 6
-	" ＡＩＭ ＢＯＴ ＥＸＴＥＲＮＡＬ()★ \n═════════════════════", ---IG 7
-	" SAD EMOTE OLD ✨ \n═════════════════════", ---IG 8
-	" LOL-EMOT♻️ \n═════════════════════", ---IG 9
+	" COBRA GROUP DANCE (EMOTE) \n═════════════════════", ---IG 4
+	" SPEED RUN  DON'T USE   ★ \n═════════════════════", ---IG 5
+	" GHOST MOVE 👻 (EMOTE) ♻️\n═════════════════════", ---IG 6
+	" ＡＩＭ ＢＯＴ ＥＸＴＥＲＮＡＬ DON'T USE ()★ \n═════════════════════", ---IG 7
+	" M10 EVO (EMOTE) ✨ \n═════════════════════", ---IG 8
+	" LOL-(EMOT♻️) \n═════════════════════", ---IG 9
 	
 	" SNIPER LOCATION ★ \n═════════════════════", ---IG 10
 	
 				
 	 "⛔ Exit ⛔ \n════════" ---IG 11
-},nil," »» ------------------------------------------ «« \n ♻️ ♻️ :- CAT-EXTERNAL  \n\n ♻️ ♻️ :- USER : RAKIB✨ \n »» ------------------------------------------ «« \n") -----Heading
+},nil," »» ------------------------------------------ «« \n ♻️ ♻️ :- CAT-EXTERNAL  \n\n ♻️ ♻️ :- CAT-EXTERNAL PLUS ✨ \n »» ------------------------------------------ «« \n") -----Heading
 
  if IG == nil then else end
  if IG == 1 then MAS1() end
@@ -60,13 +60,15 @@ gg.setRanges(gg.REGION_ANONYMOUS)
 
 --------Function 2
 function MAS2()
-
 gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_CODE_APP)
-    gg.searchNumber('h 00 00 00 00 3f 00 00 80 3e', gg.TYPE_BYTE)
-    gg.getResults(100)-----[[© Dec By メㅤJᴜʟʟㅤ4Yᴏᴜ 亗 ]]-----
-    gg.editAll('h 00 ec 51 b8 3d 8f c2 f5 3c', gg.TYPE_BYTE)
-    gg.clearResults()
-    gg.toast('Fast change Sniper')
+gg.searchNumber("h 00 00 00 00 3f 00 00 80 3e", gg.TYPE_BYTE)
+gg.getResults(1000, nil, nil)
+gg.editAll("h 00 ec 51 b8 3d 8f c2 f5 3c", gg.TYPE_BYTE)
+gg.clearResults()
+gg.searchNumber("h9A 99 19 3F 00 00 80 3E 00 00 00 00 04", gg.TYPE_BYTE)
+gg.getResults(1000, nil, nil)
+gg.editAll("hEC 51 B8 3D 8F C2 F5 3C 00 00 00 00 04", gg.TYPE_BYTE)
+gg.clearResults()
   end
 
 
@@ -87,12 +89,11 @@ gg.clearResults()
 --------Function 4
 function MAS4()
 
-    gg.setRanges(gg.REGION_ANONYMOUS)
-    gg.searchNumber("909,000,000~909000160", gg.TYPE_DWORD)
-    gg.getResults(1000)
-    gg.editAll("909,000,014", gg.TYPE_DWORD)
-    gg.clearResults()
-    gg.toast("✅ᴛʜʀᴏɴᴇ ᴇᴍᴏᴛᴇ ᴏɴ✅")
+ gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.searchNumber("909000001~909037015", gg.TYPE_DWORD)
+    gg.getResults(100000)
+gg.editAll("909000071",gg.TYPE_DWORD )
+gg.clearResults()
   end
 
 --------Function 5
@@ -145,44 +146,31 @@ function MAS8()
 gg.setRanges(gg.REGION_ANONYMOUS)
     gg.searchNumber("909,000,000~909000160", gg.TYPE_DWORD)
     gg.getResults(1000)
-    gg.editAll("909,000,048", gg.TYPE_DWORD)
+    gg.editAll("909,000,081", gg.TYPE_DWORD)
     gg.clearResults()
-  end
-
+end
 --------Function 9
 function MAS9()
+
 gg.setRanges(gg.REGION_ANONYMOUS)
     gg.searchNumber("909,000,000~909000160", gg.TYPE_DWORD)
     gg.getResults(1000)
     gg.editAll("909,000,002", gg.TYPE_DWORD)
     gg.clearResults()
-    gg.toast("✅ʟᴏʟ ᴇᴍᴏᴛᴇ ᴏɴ✅")
 end
 
 function MAS10()
+
 gg.setRanges(gg.REGION_ANONYMOUS)
-gg.setVisible(false)
-gg.searchNumber(";ingame/pickup/pickup_m24", gg.TYPE_WORD, nil, nil, nil, nil)
---[[ found: 32 ]]
-gg.getResults(100)
---[[ count: 32 ]]
-gg.editAll(";effects/vfx_inagme_laser", gg.TYPE_WORD)
+gg.searchNumber('Q"ingame/pickup/pickup_m24', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(11000)
+gg.editAll('Q"Effects/VFX_Ingame_Laser', gg.TYPE_BYTE)
 gg.clearResults()
+
 gg.setRanges(gg.REGION_ANONYMOUS)
-gg.setVisible(false)
-gg.searchNumber(";ingame/pickup/pickup_awm", gg.TYPE_WORD, nil, nil, nil, nil)
---[[ found: 24 ]]
-gg.getResults(100)
---[[ count: 24 ]]
-gg.editAll(";effects/vfx_ingame_laser", gg.TYPE_WORD)
-gg.clearResults()
-gg.setRanges(gg.REGION_ANONYMOUS)
-gg.setVisible(false)
-gg.searchNumber(";ingame/pickup/ammo/pickup_ammo_sng", gg.TYPE_WORD, nil, nil, nil, nil)
---[[ found: 34 ]]
-gg.getResults(100)
---[[ count: 34 ]]
-gg.editAll(";effects/vfx_inagme_laser_shop", gg.TYPE_WORD)
+gg.searchNumber('Q"ingame/pickup/ammo/pickup_ammo_sn', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(11000)
+gg.editAll('Q"effects/vfx_inagme_laser_shop', gg.TYPE_BYTE)
 gg.clearResults()
 end
 
