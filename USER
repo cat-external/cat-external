@@ -1,17 +1,175 @@
-------------------Script Making---------------------
-
-
-
 function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=address tt[1].flags=flags tt[1].value=value gg.setValues(tt) end -----------PERMISSION CODE
 
 
-gg.alert(" LOGING EXPIRED ")
+gg.alert(" SERVER ACTIVE✅ ")
+gg.alert(" WELCOME TO CAT-EXTERNAL ")
 
-gg.alert(" ANTICHEAT-CLOSE  ")
+
 
 -------------lobby------------
 
+function START()
+IG = gg.choice({
+    " AWM SCOPE ⚔️ \n═════════════════════", ---IG 1
+	" FAST SWITCH ALL SNIPER (IF NOT WORK ON 2 TIMES ★ \n═════════════════════", ---IG 2
+	" INVISIBLE GLOO ⚡ \n═════════════════════", ---IG 3
+	" COBRA GROUP DANCE (EMOTE) \n═════════════════════", ---IG 4
+	" SPEED RUN  DON'T USE   ★ \n═════════════════════", ---IG 5
+	" GHOST MOVE 👻 (EMOTE) ♻️\n═════════════════════", ---IG 6
+	" ＡＩＭ ＢＯＴ ＥＸＴＥＲＮＡＬ DON'T USE ()★ \n═════════════════════", ---IG 7
+	" M10 EVO (EMOTE) ✨ \n═════════════════════", ---IG 8
+	" LOL-(EMOT♻️) \n═════════════════════", ---IG 9
+	
+	" SNIPER LOCATION ★ \n═════════════════════", ---IG 10
+	
+				
+	 "⛔ Exit ⛔ \n════════" ---IG 11
+},nil," »» ------------------------------------------ «« \n ♻️ ♻️ :- CAT-EXTERNAL USER   \n\n ♻️ ♻️ :- EXP DATE : LIFETIME  ✨ \n »» ------------------------------------------ «« \n") -----Heading
 
+ if IG == nil then else end
+ if IG == 1 then MAS1() end
+ if IG == 2 then MAS2() end
+ if IG == 3 then MAS3() end
+ if IG == 4 then MAS4() end
+ if IG == 5 then MAS5() end
+ if IG == 6 then MAS6() end
+ if IG == 7 then MAS7() end
+ if IG == 8 then MAS8() end
+ if IG == 9 then MAS9() end
+ if IG == 10 then MAS10() end
+ if IG == 11 then Exit() end
+ menuk = -1
+ end
+
+
+--------Function 1
+
+function MAS1()
+gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.searchNumber('8.40779079e-45F;0D;0F;30F;50F;0.5F::33', gg.TYPE_DWORD)
+    gg.refineNumber('0', gg.TYPE_DWORD)
+    gg.getResults(1)-----[[© Dec By メㅤJᴜʟʟㅤ4Yᴏᴜ 亗 ]]-----
+    gg.editAll('-1', gg.TYPE_DWORD)
+    gg.clearResults()
+    gg.toast('Aim awm')
+  end
+
+
+--------Function 2
+function MAS2()
+gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_CODE_APP)
+gg.searchNumber("h 00 00 00 00 3f 00 00 80 3e", gg.TYPE_BYTE)
+gg.getResults(1000, nil, nil)
+gg.editAll("h 00 ec 51 b8 3d 8f c2 f5 3c", gg.TYPE_BYTE)
+gg.clearResults()
+gg.searchNumber("h9A 99 19 3F 00 00 80 3E 00 00 00 00 04", gg.TYPE_BYTE)
+gg.getResults(1000, nil, nil)
+gg.editAll("hEC 51 B8 3D 8F C2 F5 3C 00 00 00 00 04", gg.TYPE_BYTE)
+gg.clearResults()
+  end
+
+
+--------Function 3
+function MAS3()
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.setVisible(false)
+gg.searchNumber("7209065;6357095;6619245;6357039;7536755;7536745;6357108;7602286;7602281;7143525;6881327;6619235;6357111;7077996;6422623;7209077;6619243;114:69", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+--[[ found: 18 ]]
+gg.getResults(99999, nil, nil, nil, nil, nil, nil, nil, nil)
+--[[ count: 18 ]]
+gg.editAll(";effects/vfx_pet/vfx_petskill_robot", gg.TYPE_DWORD)
+gg.processResume()
+gg.clearResults()
+  end
+
+--------Function 4
+function MAS4()
+
+ gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.searchNumber("909000001~909037015", gg.TYPE_DWORD)
+    gg.getResults(100000)
+gg.editAll("909000071",gg.TYPE_DWORD )
+gg.clearResults()
+  end
+
+--------Function 5
+function MAS5()
+
+ gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("2.80259693e-44F;1.20000004768F;0.18000000715F;1.40129846e-45F", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 999, -999)
+gg.refineNumber("1.20000004968", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 999, -999)
+gg.getResults(500, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("729.000", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.toast("SPEED RUN X3 ON")
+end
+
+--------Function 6
+function MAS6()
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.searchNumber("909000000~909036001", gg.TYPE_DWORD)
+    gg.getResults("100000000")
+    gg.editAll("909036001", gg.TYPE_DWORD)
+    gg.clearResults()
+   end
+
+--------Function 7
+function MAS7()
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber('15;35;10;20::13', gg.TYPE_FLOAT)
+gg.getResults(gg.getResultsCount())
+gg.editAll('100;100;99;99', gg.TYPE_FLOAT)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber('4D;-1;-1;-1;-1;-1;-1;-1::29', gg.TYPE_FLOAT)
+gg.refineNumber('-1', gg.TYPE_FLOAT)
+gg.getResults(1)
+gg.editAll('99999999999', gg.TYPE_FLOAT)
+gg.clearResults()
+gg.searchNumber('2;0.89999997616;2;2;2;2;2::25', gg.TYPE_FLOAT)
+gg.refineNumber('2', gg.TYPE_FLOAT)
+gg.getResults(1)
+gg.editAll('99999999999', gg.TYPE_FLOAT)
+gg.clearResults()
+end
+
+--------Function 8
+function MAS8()
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.searchNumber("909,000,000~909000160", gg.TYPE_DWORD)
+    gg.getResults(1000)
+    gg.editAll("909,000,081", gg.TYPE_DWORD)
+    gg.clearResults()
+end
+--------Function 9
+function MAS9()
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.searchNumber("909,000,000~909000160", gg.TYPE_DWORD)
+    gg.getResults(1000)
+    gg.editAll("909,000,002", gg.TYPE_DWORD)
+    gg.clearResults()
+end
+
+function MAS10()
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber('Q"ingame/pickup/pickup_m24', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(11000)
+gg.editAll('Q"Effects/VFX_Ingame_Laser', gg.TYPE_BYTE)
+gg.clearResults()
+
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber('Q"ingame/pickup/ammo/pickup_ammo_sn', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(11000)
+gg.editAll('Q"effects/vfx_inagme_laser_shop', gg.TYPE_BYTE)
+gg.clearResults()
+end
 
 
 
