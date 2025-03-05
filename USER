@@ -13,7 +13,7 @@ IG = gg.choice({
     " AWM SCOPE ⚔️ \n═════════════════════", ---IG 1
 	" FAST SWITCH ALL SNIPER (IF NOT WORK ON 2 TIMES ★ \n═════════════════════", ---IG 2
 	" INVISIBLE GLOO ⚡ \n═════════════════════", ---IG 3
-	" COBRA GROUP DANCE (EMOTE) \n═════════════════════", ---IG 4
+	" LOCATION ANTENA(new) \n═════════════════════", ---IG 4
 	" SPEED RUN  DON'T USE   ★ \n═════════════════════", ---IG 5
 	" GHOST MOVE 👻 (EMOTE) ♻️\n═════════════════════", ---IG 6
 	" ＡＩＭ ＢＯＴ ＥＸＴＥＲＮＡＬ DON'T USE ()★ \n═════════════════════", ---IG 7
@@ -86,13 +86,23 @@ gg.clearResults()
 --------Function 4
 function MAS4()
 
- gg.setRanges(gg.REGION_ANONYMOUS)
-    gg.searchNumber("909000001~909037015", gg.TYPE_DWORD)
-    gg.getResults(100000)
-gg.editAll("909000071",gg.TYPE_DWORD )
-gg.clearResults()
-  end
+ gg.setRanges(gg.REGION_ANONYMOUS)  -----[[© Leak By メㅤJᴜʟʟㅤ4Yᴏᴜ 亗 ]]-----
 
+
+    gg.searchNumber("00h;00h;80h;3Fh;13h;13h;17h;3Eh::8", 1)
+
+
+    gg.refineNumber("00h;00h;80h;3Fh::4", 1)
+
+
+    gg.getResults(10)
+
+
+    gg.editAll("00h;00h;47h;42h", 1)
+
+
+    gg.clearResults()
+end
 --------Function 5
 function MAS5()
 
