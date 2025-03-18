@@ -1,0 +1,258 @@
+gg.toast("\n🛡BYPASS 10% ANTIBAN║▓░░░░░░░░║")
+gg.sleep(100)
+gg.toast("\n🛡BYPASS 20% ANTIBAN║▓▓░░░░░░░║")
+gg.sleep(200)
+gg.toast("\n🛡BYPASS 30% ANTIBAN║▓▓▓░░░░░░║")
+gg.sleep(100)
+gg.toast("\n🛡BYPASS 40% ANTIBAN║▓▓▓▓░░░░░║")
+gg.sleep(200)
+gg.toast("\n🛡BYPASS 50% ANTIBAN║▓▓▓▓░░░░░║")
+gg.sleep(100)
+gg.toast("\n🛡BYPASS 60% ANTIBAN║▓▓▓▓▓░░░░║")
+gg.sleep(200)
+gg.toast("\n🛡BYPASS 70% ANTIBAN║▓▓▓▓▓▓░░░║")
+gg.sleep(100)
+gg.toast("\n🛡BYPASS 80% ANTIBAN║▓▓▓▓▓▓▓░░║")
+gg.sleep(200)
+gg.toast("\n🛡BYPASS 90% ANTIBAN║▓▓▓▓▓▓▓▓░║")
+gg.sleep(300)
+gg.toast("\n🛡BYPASS FINALIZADO🛡️║▓▓▓▓▓▓▓▓▓║")
+gg.sleep(400)
+
+Vip = gg.alert(os.date([[
+EXTERNAL CAT
+
+
+]]),'INICIAR')
+
+function LibAutoLibil2cpp(A0_8, A1_9)
+    localpack = gg.getTargetInfo().nativeLibraryDir
+    for i, i in pairs((gg.getRangesList(localpack .. "/libil2cpp.so"))) do
+      if gg.getValues({
+        {
+          address = i.start,
+          flags = gg.TYPE_DWORD
+        },
+        {
+          address = i.start + 18,
+          flags = gg.TYPE_WORD
+        }
+      })[1].value == 1179403647 then
+        A0_8 = i.start + A0_8
+      end
+      assert(A0_8 ~= nil, "[rwmem]: error, provided address is nil.")
+      _rw = {} 
+      if type(A1_9) == "number" then
+        i = ""
+        for i = 1, A1_9 do
+          _rw[i] = {
+            address = A0_8 - 1 + i,
+            flags = gg.TYPE_BYTE
+          }
+        end
+        for i, i in ipairs(gg.getValues(_rw)) do
+          i = i .. string.format("%02X", i.value & 255)
+        end
+        return i
+      end
+      Byte = {}
+      A1_9:gsub("..", function(A0_10)
+        local L1_11, L2_12, L3_13
+        L1_11 = Byte
+        L2_12 = Byte
+        L2_12 = #L2_12
+        L2_12 = L2_12 + 1
+        L1_11[L2_12] = A0_10
+        L1_11 = _rw
+        L2_12 = Byte
+        L2_12 = #L2_12
+        L3_13 = {}
+        L3_13.address = A0_8 - 1 + #Byte
+        L3_13.flags = gg.TYPE_BYTE
+        L3_13.value = A0_10 .. "h"
+        L1_11[L2_12] = L3_13
+      end
+      )
+      gg.setValues(_rw)
+    end
+  end
+
+
+
+
+function KzTeam_Lib(Lib, Offset, Replaced)
+function scriptmod(b,c,d,e)
+gg.setRanges(32) 
+gg.searchNumber(b,c) 
+local x=gg.getResults(100) 
+gg.addListItems(x) local x = 
+gg.getListItems(100) 
+x=gg.getValues(x) x[1].address 
+= x[1].address-d x[1].value =e 
+gg.setValues(x) gg.removeListItems(x) 
+local x=gg.getListItems(1) 
+gg.removeListItems(x) gg.clearResults() end 
+local info = gg.getTargetInfo()
+localpack = info.nativeLibraryDir
+local t = gg.getRangesList(localpack..'/'..Lib)
+for _, __ in pairs(t) do
+local t = gg.getValues({{address = __.start, flags = gg.TYPE_DWORD}, {address = __.start + 0x12, flags = gg.TYPE_WORD}})
+if t[1].value == 0x464C457F then
+Offset = __['start'] + Offset end
+assert(Offset ~= nil, '[rwmem]: error, provided address is nil.')
+_rw = {}
+if type(Replaced) == 'number' then
+_ = ''
+for _ = 1, Replaced do _rw[_] = {address = (Offset - 1) + _, flags = gg.TYPE_BYTE} end
+for v, __ in ipairs(gg.getValues(_rw)) do _ = _ .. string.format('%02X', __.value & 0xFF) end
+return _
+end
+Byte = {} Replaced:gsub('..', function(x) 
+Byte[#Byte + 1] = x _rw[#Byte] = {address = (Offset - 1) + #Byte, flags = gg.TYPE_BYTE, value = x .. 'h'} 
+end)
+gg.setValues(_rw)
+end 
+end
+
+
+
+local memFrom, memTo, lib, num, lim, results, src, ok = 0, -1, nil, 0, 32, {}, nil, false
+function name(n) if lib ~= n then  lib = n  local ranges = gg.getRangesList(lib)
+    if #ranges == 0 then  gg.toast("️ENTRE AL JUEGO Y SELECIONE EL PROCESO CORRECTAMENTE") os.exit()
+    else memFrom = ranges[1].start memTo = ranges[#ranges]["end"]  end  end end
+function hex2tbl(hex)local ret = {} hex:gsub("%S%S", function(ch) ret[#ret + 1] = ch return "" end) return ret end
+function original(orig) local tbl = hex2tbl(orig)  local len = #tbl
+  if len == 0 then return end  local used = len  if len > lim then
+    used = lim end  local s = ""  for i = 1, used do   if i ~= 1 then
+      s = s .. ";" end   local v = tbl[i]   if v == "??" or v == "**" then
+      v = "0~~0"   end    s = s .. v .. "r"  end  s = s .. "::" .. used
+  gg.searchNumber(s, gg.TYPE_BYTE, false, gg.SIGN_EQUAL, memFrom, memTo)
+  if len > used then    for i = used + 1, len do    local v = tbl[i]
+      if v == "??" or v == "**" then    v = 256      else      v = ("0x" .. v) + 0     if v > 127 then        v = v - 256       end  end    tbl[i] = v  end end
+  local found = gg.getResultCount()  results = {}  local count = 0  local checked = 0
+  while not (found <= checked) do    local all = gg.getResults(8)   local total = #all    local start = checked
+    if total < checked + used then    break end    for i, v in ipairs(all) do     v.address = v.address + myoffset    end
+    gg.loadResults(all)    while total > start do      local good = true
+      local offset = all[1 + start].address - 1     if len > used then     local get = {}       for i = lim + 1, len do      get[i - lim] = {          address = offset + i,        flags = gg.TYPE_BYTE,          value = 0      }   end      get = gg.getValues(get)      for i = lim + 1, len do       local ch = tbl[i]
+          if ch ~= 256 and get[i - lim].value ~= ch then        good = false          break  end end end
+      if good then       count = count + 1   results[count] = offset   checked = checked + used    else      local del = {}     for i = 1, used do      del[i] = all[i + start]      end     gg.removeResults(del)     end start = start + used   end  end end
+function replaced(repl)  num = num + 1  local tbl = hex2tbl(repl)
+  if src ~= nil then local source = hex2tbl(src)
+    for i, v in ipairs(tbl) do   if v ~= "??" and v ~= "**" and v == source[i] then
+        tbl[i] = "**"    end end  src = nil end  local cnt = #tbl  local set = {} local s = 0
+  for _, addr in ipairs(results) do   for i, v in ipairs(tbl) do
+      if v ~= "??" and v ~= "**" then     s = s + 1
+        set[s] = {   address = addr + i,  value = v .. "r",   flags = gg.TYPE_BYTE     }
+      end end end  if s ~= 0 then gg.setValues(set) end ok = true end 
+
+b =[[
+
+]]
+  fileData = gg.EXT_STORAGE .. '/[KzADM].dat'
+  io.output(fileData):write(b):close()
+  gg.loadList(fileData, gg.LOAD_APPEND)
+  r = gg.getListItems()
+  getReset = gg.getValues(r)
+  gg.clearList()
+  os.remove(fileData)
+
+--------------MENU PRINCIPAL-----------
+
+off = "  "
+on = " ✅ ATIVADO ✅" 
+
+function MENU_INICIO()
+AIMBOT_KZ = gg.choice({
+
+"CAMERA HACK " ..GHOST,
+"🏃 " ..mao,
+	               "⪼ Sair ⪻",
+},nil,"SCRIPT VIP Kz Team! \nFree Fire Advance.x\nVersion Completa")
+
+if AIMBOT_KZ == nil then else
+if AIMBOT_KZ == 1 then HACK1() end
+if AIMBOT_KZ == 2 then HACK2() end
+if AIMBOT_KZ == 3 then exit() end
+end
+SCRIPT_BASE_VIP = -1
+end
+
+
+
+-------------------FUNCIONES CÓDIGOS------------
+
+
+GHOST = off
+function HACK1()
+gg.setVisible(false)
+while true do
+if gg.isVisible() then
+gg.setVisible(false)
+if GHOST == off then 
+gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_CODE_APP)
+gg.searchNumber("h 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 80 BF 00 00 00 00 00 00 80 BF 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 80 BF 00 00 80 7F 00 00 80 7F 00 00 80 7F 00 00 80 FF", gg.TYPE_BYTE)
+t1 = gg.getResults(gg.getResultsCount())
+gg.setValues(t1)
+gg.editAll("h 00 00 00 00 22 8E C3 40 00 00 00 00 00 00 00 00 00 00 80 BF 00 00 00 00 00 00 80 BF 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 80 BF 00 00 80 7F 00 00 80 7F 00 00 80 7F 00 00 80 FF", gg.TYPE_BYTE)
+gg.clearResults()
+GHOST = on
+elseif GHOST == on  then  
+gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_CODE_APP)
+gg.searchNumber("h 00 00 00 00 22 8E C3 40 00 00 00 00 00 00 00 00 00 00 80 BF 00 00 00 00 00 00 80 BF 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 80 BF 00 00 80 7F 00 00 80 7F 00 00 80 7F 00 00 80 FF", gg.TYPE_BYTE)
+t1 = gg.getResults(gg.getResultsCount())
+gg.setValues(t1)
+gg.editAll("h 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 80 BF 00 00 00 00 00 00 80 BF 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 80 BF 00 00 80 7F 00 00 80 7F 00 00 80 7F 00 00 80 FF", gg.TYPE_BYTE)
+gg.clearResults()
+GHOST = off
+end 
+end
+end
+end
+
+
+mao = off
+function HACK2()
+if mao == off then
+KzTeam_Lib("libil2cpp.so",0x13547b4,"0100A0E31EFF2FE1")
+KzTeam_Lib("libil2cpp.so",0x5d2518c,"0100A0E31EFF2FE1")
+gg.toast("🕹️SUPER VELOCIDAD")
+gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("h 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3f 00 00 80 3f 00 00 80 3f 00 00 00 00 00 00 80 3f 00 00 00 00 00 00 00 00 00 00 80 bf 00 00 00 00", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(1000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("h 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 80 3F 00 00 80 3F 00 00 00 00 66 66 66 40 00 00 00 00 00 00 00 00 00 00 80 BF 00 00 00 00", gg.TYPE_BYTE)
+gg.clearResults()
+gg.alert("CAMARA HACK ✔️")
+mao = on
+gg.processResume()
+elseif mao == on then
+KzTeam_Lib("libil2cpp.so",0x13547b4,"0100A0E31EFF2FE1")
+KzTeam_Lib("libil2cpp.so",0x5d2518c,"0100A0E31EFF2FE1")
+gg.toast("🕹️SUPER VELOCIDAD")
+gg.clearResults()
+gg.clearResults()
+mao = off
+end
+end
+
+
+function exit()
+print("❤️")
+gg.toast(" CAT-EXTERNAL  ")
+os.exit()
+end
+
+function ScriptMod(a, b)gg.clearResults()gg.setRanges(32)gg.searchNumber(a, 2)gg.setVisible(false)gg.getResults(1000)gg.editAll(b, 2)gg.setVisible(false)gg.clearResults()end
+
+
+while true do
+  if gg.isVisible(true) then
+    SCRIPT_BASE_VIP = 1
+    gg.setVisible(false)
+    gg.clearResults()
+  end
+  if SCRIPT_BASE_VIP == 1 then
+    MENU_INICIO()
+  end
+  SCRIPT_BASE_VIP = -1
+end
