@@ -1,97 +1,6 @@
-gg.toast("\n🛡BYPASS 10% ANTIBAN║▓░░░░░░░░║")
-gg.sleep(100)
-gg.toast("\n🛡BYPASS 20% ANTIBAN║▓▓░░░░░░░║")
-gg.sleep(200)
-gg.toast("\n🛡BYPASS 30% ANTIBAN║▓▓▓░░░░░░║")
-gg.sleep(100)
-gg.toast("\n🛡BYPASS 40% ANTIBAN║▓▓▓▓░░░░░║")
-gg.sleep(200)
-gg.toast("\n🛡BYPASS 50% ANTIBAN║▓▓▓▓░░░░░║")
-gg.sleep(100)
-gg.toast("\n🛡BYPASS 60% ANTIBAN║▓▓▓▓▓░░░░║")
-gg.sleep(200)
-gg.toast("\n🛡BYPASS 70% ANTIBAN║▓▓▓▓▓▓░░░║")
-gg.sleep(100)
-gg.toast("\n🛡BYPASS 80% ANTIBAN║▓▓▓▓▓▓▓░░║")
-gg.sleep(200)
-gg.toast("\n🛡BYPASS 90% ANTIBAN║▓▓▓▓▓▓▓▓░║")
-gg.sleep(300)
-gg.toast("\n🛡BYPASS FINALIZADO🛡️║▓▓▓▓▓▓▓▓▓║")
-gg.sleep(400)
-
-Vip = gg.alert(os.date([[
-EXTERNAL CAT
-
-
-]]),'INICIAR')
-
-function LibAutoLibil2cpp(A0_8, A1_9)
-    localpack = gg.getTargetInfo().nativeLibraryDir
-    for i, i in pairs((gg.getRangesList(localpack .. "/libil2cpp.so"))) do
-      if gg.getValues({
-        {
-          address = i.start,
-          flags = gg.TYPE_DWORD
-        },
-        {
-          address = i.start + 18,
-          flags = gg.TYPE_WORD
-        }
-      })[1].value == 1179403647 then
-        A0_8 = i.start + A0_8
-      end
-      assert(A0_8 ~= nil, "[rwmem]: error, provided address is nil.")
-      _rw = {} 
-      if type(A1_9) == "number" then
-        i = ""
-        for i = 1, A1_9 do
-          _rw[i] = {
-            address = A0_8 - 1 + i,
-            flags = gg.TYPE_BYTE
-          }
-        end
-        for i, i in ipairs(gg.getValues(_rw)) do
-          i = i .. string.format("%02X", i.value & 255)
-        end
-        return i
-      end
-      Byte = {}
-      A1_9:gsub("..", function(A0_10)
-        local L1_11, L2_12, L3_13
-        L1_11 = Byte
-        L2_12 = Byte
-        L2_12 = #L2_12
-        L2_12 = L2_12 + 1
-        L1_11[L2_12] = A0_10
-        L1_11 = _rw
-        L2_12 = Byte
-        L2_12 = #L2_12
-        L3_13 = {}
-        L3_13.address = A0_8 - 1 + #Byte
-        L3_13.flags = gg.TYPE_BYTE
-        L3_13.value = A0_10 .. "h"
-        L1_11[L2_12] = L3_13
-      end
-      )
-      gg.setValues(_rw)
-    end
-  end
-
-
-
-
-function KzTeam_Lib(Lib, Offset, Replaced)
-function scriptmod(b,c,d,e)
-gg.setRanges(32) 
-gg.searchNumber(b,c) 
-local x=gg.getResults(100) 
-gg.addListItems(x) local x = 
-gg.getListItems(100) 
-x=gg.getValues(x) x[1].address 
-= x[1].address-d x[1].value =e 
-gg.setValues(x) gg.removeListItems(x) 
-local x=gg.getListItems(1) 
-gg.removeListItems(x) gg.clearResults() end 
+function SRIJA(Lib, Offset, Replaced) local info = gg.getTargetInfo() localpack = info.nativeLibraryDir local t = gg.getRangesList(localpack..'/lib'..Lib..'.so') for _, __ in pairs(t) do local t = gg.getValues({{address = __.start, flags = gg.TYPE_DWORD}, {address = __.start + 18, flags = gg.TYPE_WORD}}) if t[1].value == 1179403647 then Offset = __['start'] + Offset end assert(Offset ~= nil, '[rwmem]: error, provided address is nil.') _rw = {} if type(Replaced) == 'number' then _ = '' for _ = 1, Replaced do _rw[_] = {address = (Offset - 1) + _, flags = gg.TYPE_BYTE} end for v, __ in ipairs(gg.getValues(_rw)) do _ = _ .. string.format('%02X', __.value & 255) end return _ end Byte = {} Replaced:gsub('..', function(x) Byte[#Byte + 1] = x _rw[#Byte] = {address = (Offset - 1) + #Byte, flags = gg.TYPE_BYTE, value = x .. 'h'} end) gg.setValues(_rw) end end
+function DNP_IS_BACK(DNP_BACK, DNP_OK)gg.setRanges(32)gg.searchNumber(DNP_BACK, 1)gg.setVisible(false)gg.getResults(1000)gg.editAll(DNP_OK, 1)gg.setVisible(false)end
+function TigerScripts(Lib, Offset, Replaced)
 local info = gg.getTargetInfo()
 localpack = info.nativeLibraryDir
 local t = gg.getRangesList(localpack..'/'..Lib)
@@ -113,146 +22,293 @@ end)
 gg.setValues(_rw)
 end 
 end
-
-
-
-local memFrom, memTo, lib, num, lim, results, src, ok = 0, -1, nil, 0, 32, {}, nil, false
-function name(n) if lib ~= n then  lib = n  local ranges = gg.getRangesList(lib)
-    if #ranges == 0 then  gg.toast("️ENTRE AL JUEGO Y SELECIONE EL PROCESO CORRECTAMENTE") os.exit()
-    else memFrom = ranges[1].start memTo = ranges[#ranges]["end"]  end  end end
-function hex2tbl(hex)local ret = {} hex:gsub("%S%S", function(ch) ret[#ret + 1] = ch return "" end) return ret end
-function original(orig) local tbl = hex2tbl(orig)  local len = #tbl
-  if len == 0 then return end  local used = len  if len > lim then
-    used = lim end  local s = ""  for i = 1, used do   if i ~= 1 then
-      s = s .. ";" end   local v = tbl[i]   if v == "??" or v == "**" then
-      v = "0~~0"   end    s = s .. v .. "r"  end  s = s .. "::" .. used
-  gg.searchNumber(s, gg.TYPE_BYTE, false, gg.SIGN_EQUAL, memFrom, memTo)
-  if len > used then    for i = used + 1, len do    local v = tbl[i]
-      if v == "??" or v == "**" then    v = 256      else      v = ("0x" .. v) + 0     if v > 127 then        v = v - 256       end  end    tbl[i] = v  end end
-  local found = gg.getResultCount()  results = {}  local count = 0  local checked = 0
-  while not (found <= checked) do    local all = gg.getResults(8)   local total = #all    local start = checked
-    if total < checked + used then    break end    for i, v in ipairs(all) do     v.address = v.address + myoffset    end
-    gg.loadResults(all)    while total > start do      local good = true
-      local offset = all[1 + start].address - 1     if len > used then     local get = {}       for i = lim + 1, len do      get[i - lim] = {          address = offset + i,        flags = gg.TYPE_BYTE,          value = 0      }   end      get = gg.getValues(get)      for i = lim + 1, len do       local ch = tbl[i]
-          if ch ~= 256 and get[i - lim].value ~= ch then        good = false          break  end end end
-      if good then       count = count + 1   results[count] = offset   checked = checked + used    else      local del = {}     for i = 1, used do      del[i] = all[i + start]      end     gg.removeResults(del)     end start = start + used   end  end end
-function replaced(repl)  num = num + 1  local tbl = hex2tbl(repl)
-  if src ~= nil then local source = hex2tbl(src)
-    for i, v in ipairs(tbl) do   if v ~= "??" and v ~= "**" and v == source[i] then
-        tbl[i] = "**"    end end  src = nil end  local cnt = #tbl  local set = {} local s = 0
-  for _, addr in ipairs(results) do   for i, v in ipairs(tbl) do
-      if v ~= "??" and v ~= "**" then     s = s + 1
-        set[s] = {   address = addr + i,  value = v .. "r",   flags = gg.TYPE_BYTE     }
-      end end end  if s ~= 0 then gg.setValues(set) end ok = true end 
-
-b =[[
-
+function PhonggPro(A0_0, A1_1)
+localpack = gg.getTargetInfo().nativeLibraryDir
+for a5, a6 in pairs((gg.getRangesList(localpack .. "/libanogs.so"))) do
+if gg.getValues({
+{
+address = a6.start,
+flags = gg.TYPE_DWORD
+},
+{
+address = a6.start + 18,
+flags = gg.TYPE_WORD
+}
+})[1].value == 1179403647 then
+A0_0 = a6.start + A0_0
+end
+assert(A0_0 ~= nil, "[rwmem]: error, provided address is nil.")
+_rw = {}
+if type(A1_1) == "number" then
+a6 = ""
+for a10 = 1, A1_1 do
+_rw[a10] = {
+address = A0_0 - 1 + a10,
+flags = gg.TYPE_BYTE
+}
+end
+for a10, a11 in ipairs(gg.getValues(_rw)) do
+a11 = a11 .. string.format("%02X", a11.value & 255)
+end
+return a6
+end
+Byte = {}
+A1_1:gsub("..", function(A0_2)
+local L1_3, L2_4, L3_5
+L1_3, L2_4, L3_5 = nil, nil, nil
+L1_3 = Byte
+L2_4 = Byte
+L2_4 = #L2_4
+L2_4 = L2_4 + 1
+L1_3[L2_4] = A0_2
+L1_3 = _rw
+L2_4 = Byte
+L2_4 = #L2_4
+L3_5 = {}
+L3_5.address = A0_0 - 1 + #Byte
+L3_5.flags = gg.TYPE_BYTE
+L3_5.value = A0_2 .. "h"
+L1_3[L2_4] = L3_5
+end
+)
+gg.setValues(_rw)
+end
+end
+b = ([[
+22105
+Var #865FA8FC|865fa8fc|10|43960000|0|0|0|0|r-xp|/data/app/com.dts.freefireth/lib/libanogs.so|a238fc
+]])
+fileData = gg.EXT_STORAGE .. "/[#Phong].dat"
+io.output(fileData):write(b):close()
+gg.loadList(fileData, gg.LOAD_APPEND)
+gg.clearList()
+os.remove(fileData)
+b = [[
+20245
+Var #95149204|95149204|10|42200000|0|0|0|0|rwxp|/data/app/com.dts.freefireth-1/lib/arm/libanogs.so|686204
 ]]
-  fileData = gg.EXT_STORAGE .. '/[KzADM].dat'
-  io.output(fileData):write(b):close()
-  gg.loadList(fileData, gg.LOAD_APPEND)
-  r = gg.getListItems()
-  getReset = gg.getValues(r)
-  gg.clearList()
-  os.remove(fileData)
+fileData = gg.EXT_STORAGE .. "/[###].dat"
+io.output(fileData):write(b):close()
+gg.loadList(fileData, gg.LOAD_APPEND)
+r = gg.getListItems()
+getReset = gg.getValues(r)
+gg.clearList()
+os.remove(fileData)
+function main()
+    GLabel = "Free Fire"
+    GProcess = "com.dts.freefireth"
+    GVersion = "1.109.1"
 
---------------MENU PRINCIPAL-----------
-
-off = "  "
-on = " ✅ ATIVADO ✅" 
-
-function MENU_INICIO()
-AIMBOT_KZ = gg.choice({
-
-"CAMERA HACK " ..GHOST,
-"🏃 " ..mao,
-	               "⪼ Sair ⪻",
-},nil,"SCRIPT VIP Kz Team! \nFree Fire Advance.x\nVersion Completa")
-
-if AIMBOT_KZ == nil then else
-if AIMBOT_KZ == 1 then HACK1() end
-if AIMBOT_KZ == 2 then HACK2() end
-if AIMBOT_KZ == 3 then exit() end
-end
-SCRIPT_BASE_VIP = -1
-end
-
-
-
--------------------FUNCIONES CÓDIGOS------------
-
-
-GHOST = off
-function HACK1()
-gg.setVisible(false)
-while true do
-if gg.isVisible() then
-gg.setVisible(false)
-if GHOST == off then 
-gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_CODE_APP)
-gg.searchNumber("h 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 80 BF 00 00 00 00 00 00 80 BF 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 80 BF 00 00 80 7F 00 00 80 7F 00 00 80 7F 00 00 80 FF", gg.TYPE_BYTE)
-t1 = gg.getResults(gg.getResultsCount())
-gg.setValues(t1)
-gg.editAll("h 00 00 00 00 22 8E C3 40 00 00 00 00 00 00 00 00 00 00 80 BF 00 00 00 00 00 00 80 BF 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 80 BF 00 00 80 7F 00 00 80 7F 00 00 80 7F 00 00 80 FF", gg.TYPE_BYTE)
-gg.clearResults()
-GHOST = on
-elseif GHOST == on  then  
-gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_CODE_APP)
-gg.searchNumber("h 00 00 00 00 22 8E C3 40 00 00 00 00 00 00 00 00 00 00 80 BF 00 00 00 00 00 00 80 BF 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 80 BF 00 00 80 7F 00 00 80 7F 00 00 80 7F 00 00 80 FF", gg.TYPE_BYTE)
-t1 = gg.getResults(gg.getResultsCount())
-gg.setValues(t1)
-gg.editAll("h 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 80 BF 00 00 00 00 00 00 80 BF 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 80 BF 00 00 80 7F 00 00 80 7F 00 00 80 7F 00 00 80 FF", gg.TYPE_BYTE)
-gg.clearResults()
-GHOST = off
-end 
-end
-end
-end
-
-
-mao = off
-function HACK2()
-if mao == off then
-KzTeam_Lib("libil2cpp.so",0x13547b4,"0100A0E31EFF2FE1")
-KzTeam_Lib("libil2cpp.so",0x5d2518c,"0100A0E31EFF2FE1")
-gg.toast("🕹️SUPER VELOCIDAD")
-gg.clearResults()
-gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber("h 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3f 00 00 80 3f 00 00 80 3f 00 00 00 00 00 00 80 3f 00 00 00 00 00 00 00 00 00 00 80 bf 00 00 00 00", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
-gg.getResults(1000, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("h 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 80 3F 00 00 80 3F 00 00 00 00 66 66 66 40 00 00 00 00 00 00 00 00 00 00 80 BF 00 00 00 00", gg.TYPE_BYTE)
-gg.clearResults()
-gg.alert("CAMARA HACK ✔️")
-mao = on
-gg.processResume()
-elseif mao == on then
-KzTeam_Lib("libil2cpp.so",0x13547b4,"0100A0E31EFF2FE1")
-KzTeam_Lib("libil2cpp.so",0x5d2518c,"0100A0E31EFF2FE1")
-gg.toast("🕹️SUPER VELOCIDAD")
-gg.clearResults()
-gg.clearResults()
-mao = off
-end
-end
-
-
-function exit()
-print("❤️")
-gg.toast(" CAT-EXTERNAL  ")
-os.exit()
-end
-
-function ScriptMod(a, b)gg.clearResults()gg.setRanges(32)gg.searchNumber(a, 2)gg.setVisible(false)gg.getResults(1000)gg.editAll(b, 2)gg.setVisible(false)gg.clearResults()end
-
-
-while true do
-  if gg.isVisible(true) then
-    SCRIPT_BASE_VIP = 1
     gg.setVisible(false)
+        CAMLEFT = CAMLEFT or "🔴⃢    " 
+        Airmodz = gg.choice({
+        LOOTLC .. "  LOOT LOCATION",
+        ANTENNA .. "  ENEMY LOCATION",
+        SNIPERAIM .. "  SNIPER AIMBOT",
+        SNIPERSWHICH .. "  FAST SWITCH",
+        GLOOWALL .. "  INVISIBLE GLOOWALL",
+        CAMLEFT .. "  LEFT CAMERA",
+        "ᴇxɪᴛ 🚪"
+    }, nil, "YOUR PANEL NAME ")
+
+if Airmodz == 1 then
+        LOOTLC1()
+    elseif Airmodz == 2 then
+        ANTENNA1()
+    elseif Airmodz == 3 then
+        SNIPERAIM1()
+    elseif Airmodz == 4 then
+        SNIPERSWHICH1()
+    elseif Airmodz == 5 then
+        GLOOWALL1()
+    elseif Airmodz == 6 then
+        a6()
+    elseif Airmodz == 7 then
+        a7()
+    end
+end
+
+
+--যদি lib ফাংশন ইউজ করতে চান এই মেথড ইউজ করবেন
+--gg.setVisible(false)
+--so = gg.getRangesList("libimain.so")[1].start
+--setvalue(so + "0xঅফসেট", 4, "hপ্যাচ ভ্যালু")
+
+
+
+LOOTLC = "🔴⃢    "
+function LOOTLC1()
+    if LOOTLC == "🔴⃢    " then
+        gg.setRanges(32)
+        gg.searchNumber("h 19 00 00 00 69 00 6E 00 67 00 61 00 6D 00 65 00 2F 00 70 00 69 00 63 00 6B 00 75 00 70 00 2F 00 70 00 69 00 63 00 6B 00 75 00 70 00 5F 00 62 00 6D 00 39 00 34 00 00 00", 1)
+        gg.getResults(gg.getResultsCount())
+        gg.editAll("h 19 00 00 00 65 00 66 00 66 00 65 00 63 00 74 00 73 00 2F 00 76 00 66 00 78 00 5F 00 69 00 6E 00 67 00 61 00 6D 00 65 00 5F 00 6C 00 61 00 73 00 65 00 72 00 00 00 00 00", 1)
+        gg.clearResults()
+        gg.setRanges(32)
+        gg.searchNumber("h 00 00 00 00 22 00 00 00 69 00 6E 00 67 00 61 00 6D 00 65 00 2F 00 70 00 69 00 63 00 6B 00 75 00 70 00 2F 00 61 00 6D 00 6D 00 6F 00 2F 00 70 00 69 00 63 00 6B 00 75 00 70 00 5F 00 61 00 6D 00 6D 00 6F 00 5F 00 73 00 6E 00 67 00 00 00 00 00", 1)
+        gg.getResults(gg.getResultsCount())
+        gg.editAll("h 00 00 00 00 22 00 00 00 65 00 66 00 66 00 65 00 63 00 74 00 73 00 2F 00 76 00 66 00 78 00 5F 00 69 00 6E 00 61 00 67 00 6D 00 65 00 5F 00 6C 00 61 00 73 00 65 00 72 00 5F 00 73 00 68 00 6F 00 70 00 00 00 00 00 00 00 00 00 00 00 00 00 00", 1)
+        gg.clearResults()
+        gg.alert("LOOT LOCATION ENABED ✔️")
+        LOOTLC = "     ⃢🟢"
+    elseif LOOTLC == "     ⃢🟢" then
+        gg.setRanges(32)
+        gg.searchNumber("h 19 00 00 00 65 00 66 00 66 00 65 00 63 00 74 00 73 00 2F 00 76 00 66 00 78 00 5F 00 69 00 6E 00 67 00 61 00 6D 00 65 00 5F 00 6C 00 61 00 73 00 65 00 72 00 00 00 00 00", 1)
+        gg.getResults(gg.getResultsCount())
+        gg.editAll("h 19 00 00 00 69 00 6E 00 67 00 61 00 6D 00 65 00 2F 00 70 00 69 00 63 00 6B 00 75 00 70 00 2F 00 70 00 69 00 63 00 6B 00 75 00 70 00 5F 00 62 00 6D 00 39 00 34 00 00 00", 1)
+        gg.clearResults()
+        gg.setRanges(32)
+        gg.searchNumber("h 00 00 00 00 22 00 00 00 65 00 66 00 66 00 65 00 63 00 74 00 73 00 2F 00 76 00 66 00 78 00 5F 00 69 00 6E 00 61 00 67 00 6D 00 65 00 5F 00 6C 00 61 00 73 00 65 00 72 00 5F 00 73 00 68 00 6F 00 70 00 00 00 00 00 00 00 00 00 00 00 00 00 00", 1)
+        gg.getResults(gg.getResultsCount())
+        gg.editAll("h 00 00 00 00 22 00 00 00 69 00 6E 00 67 00 61 00 6D 00 65 00 2F 00 70 00 69 00 63 00 6B 00 75 00 70 00 2F 00 61 00 6D 00 6D 00 6F 00 2F 00 70 00 69 00 63 00 6B 00 75 00 70 00 5F 00 61 00 6D 00 6D 00 6F 00 5F 00 73 00 6E 00 67 00 00 00 00 00", 1)
+        gg.clearResults()
+        gg.alert("LOOT LOCATION DISABLED ✔️")
+        LOOTLC = "🔴⃢    "
+    end
+end
+
+ANTENNA = "🔴⃢    "
+function ANTENNA1()
+    if ANTENNA == "🔴⃢    " then
+        gg.setRanges(32)
+        gg.searchNumber("h 73 6C 20 35 00 00 80 3F", 1)
+        gg.getResults(gg.getResultsCount())
+        gg.editAll("h 73 6C 20 35 9A 19 7A 43", 1)
+        gg.clearResults()
+        gg.setRanges(32)
+        gg.searchNumber("h E9 C5 4A 35 00 00 80 3F", 1)
+        gg.getResults(gg.getResultsCount())
+        gg.editAll("h E9 C5 4A 35 9A 19 7A 43", 1)
+        gg.clearResults()
+        gg.toast("ANTENNA DONE ✔️")
+        ANTENNA = "     ⃢🟢"
+    elseif ANTENNA == "     ⃢🟢" then
+        gg.setRanges(32)
+        gg.searchNumber("h 00 00 01 00 00 00 00 00 34 42 9A 99 99 3E 0A D7", 1)
+        gg.getResults(gg.getResultsCount())
+        gg.editAll("h C0 3f 01 00 00 00 00 00 34 42 9A 99 99 3E 0A D7", 1)
+        gg.clearResults()
+        gg.toast("ANTENNA OFF ❌")
+        ANTENNA = "🔴⃢    "
+    end
+end
+
+SNIPERAIM = "🔴⃢    "
+function SNIPERAIM1()
+    if SNIPERAIM == "🔴⃢    " then
+        gg.setRanges(32)
+        gg.searchNumber("h CD CC CC 3D 06 00 00 00 00 00 00 00 00 00 00 00 00 00", 1)
+        gg.getResults(gg.getResultsCount())
+        gg.editAll("h CD CC CC 3D 06 00 00 00 00 00 FF FF 00 00 00 00 00 00", 1)
+        gg.clearResults()
+        gg.toast("SNIPER SCOPE ACTIVATED ✔️")
+        SNIPERAIM = "     ⃢🟢"
+    elseif SNIPERAIM == "     ⃢🟢" then
+        gg.setRanges(32)
+        gg.searchNumber("h CD CC CC 3D 06 00 00 00 00 00 FF FF 00 00 00 00 00 00", 1)
+        gg.getResults(gg.getResultsCount())
+        gg.editAll("h CD CC CC 3D 06 00 00 00 00 00 00 00 00 00 00 00 00 00", 1)
+        gg.clearResults()
+        gg.toast("SNIPER SCOPE DISACTIVATED ❌")
+        SNIPERAIM = "🔴⃢    "
+    end
+end
+
+SNIPERSWHICH = "🔴⃢    "
+function SNIPERSWHICH1()
+    if SNIPERSWHICH == "🔴⃢    " then
+        gg.setRanges(32)
+        gg.searchNumber("h B4 42 96 00 00 00 00 00 00 00 00 00 00 3F 00 00 80 3E 00 00 00 00 04 00 00 00 00 00 80 3F 00 00 20 41 00 00 34 42 01", 1)
+        gg.getResults(gg.getResultsCount())
+        gg.editAll("h B4 42 96 00 00 00 00 00 00 00 00 00 00 3B 00 00 80 3B 00 00 00 00 04 00 00 00 00 00 80 3F 00 00 20 41 00 00 34 42 01", 1)
+        gg.clearResults()
+        gg.setRanges(32)
+        gg.searchNumber("h 5C 43 00 00 28 42 00 00 B4 42 78 00 00 00 00 00 00 00 9A 99 19 3F 00 00 80 3E 00 00 00 00 04 00 00 00 00 00 80 3F 00 00 20 41 00 00 34 42 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3F", 1)
+        gg.getResults(gg.getResultsCount())
+        gg.editAll("h 5C 43 00 00 28 42 00 00 B4 42 78 00 00 00 00 00 00 00 9A 99 19 3C 00 00 F5 3C 00 00 00 00 04 00 00 00 00 00 80 3F 00 00 20 41 00 00 34 42 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3F", 1)
+        gg.clearResults()
+        gg.toast("SNIPER SWITCH ACTIVATED ✔️")
+        SNIPERSWHICH = "     ⃢🟢"
+    elseif SNIPERSWHICH == "     ⃢🟢" then
+        gg.setRanges(32)
+        gg.searchNumber("h B4 42 96 00 00 00 00 00 00 00 00 00 00 3B 00 00 80 3B 00 00 00 00 04 00 00 00 00 00 80 3F 00 00 20 41 00 00 34 42 01", 1)
+        gg.getResults(gg.getResultsCount())
+        gg.editAll("h B4 42 96 00 00 00 00 00 00 00 00 00 00 3F 00 00 80 3E 00 00 00 00 04 00 00 00 00 00 80 3F 00 00 20 41 00 00 34 42 01", 1)
+        gg.clearResults()
+        gg.setRanges(32)
+        gg.searchNumber("h 5C 43 00 00 28 42 00 00 B4 42 78 00 00 00 00 00 00 00 9A 99 19 3C 00 00 F5 3C 00 00 00 00 04 00 00 00 00 00 80 3F 00 00 20 41 00 00 34 42 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3F", 1)
+        gg.getResults(gg.getResultsCount())
+        gg.editAll("h 5C 43 00 00 28 42 00 00 B4 42 78 00 00 00 00 00 00 00 9A 99 19 3F 00 00 80 3E 00 00 00 00 04 00 00 00 00 00 80 3F 00 00 20 41 00 00 34 42 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3F", 1)
+        gg.clearResults()
+        gg.toast("SNIPER SWITCH DISACTIVATED ❌")
+        SNIPERSWHICH = "🔴⃢    "
+    end
+end
+
+GLOOWALL = "🔴⃢    "
+function GLOOWALL1()
+    if GLOOWALL == "🔴⃢    " then
+        gg.setRanges(32)
+        gg.searchNumber("h 23 00 00 00 69 00 6E 00 67 00 61 00 6D 00 65 00 2F 00 61 00 73 00 73 00 69 00 73 00 74 00 61 00 6E 00 74 00 69 00 74 00 65 00 6D 00 2F 00 69 00 63 00 65 00 77 00 61 00 6C 00 6C 00 5F 00 62 00 75 00 6E 00 6B 00 65 00 72", 1)
+        gg.getResults(gg.getResultsCount())
+        gg.editAll("h 23 00 00 00 65 00 66 00 66 00 65 00 63 00 74 00 73 00 2F 00 76 00 66 00 78 00 5F 00 70 00 65 00 74 00 2F 00 76 00 66 00 78 00 5F 00 70 00 65 00 74 00 73 00 6B 00 69 00 6C 00 6C 00 5F 00 72 00 6F 00 62 00 6F 00 74 00 00", 1)
+        gg.clearResults()
+        gg.toast("INVISIBLE WALL ACTIVATED ✔️")
+        GLOOWALL = "     ⃢🟢"
+    elseif GLOOWALL == "     ⃢🟢" then
+        gg.setRanges(32)
+        gg.searchNumber("h 23 00 00 00 65 00 66 00 66 00 65 00 63 00 74 00 73 00 2F 00 76 00 66 00 78 00 5F 00 70 00 65 00 74 00 2F 00 76 00 66 00 78 00 5F 00 70 00 65 00 74 00 73 00 6B 00 69 00 6C 00 6C 00 5F 00 72 00 6F 00 62 00 6F 00 74 00 00", 1)
+        gg.getResults(gg.getResultsCount())
+        gg.editAll("h 23 00 00 00 69 00 6E 00 67 00 61 00 6D 00 65 00 2F 00 61 00 73 00 73 00 69 00 73 00 74 00 61 00 6E 00 74 00 69 00 74 00 65 00 6D 00 2F 00 69 00 63 00 65 00 77 00 61 00 6C 00 6C 00 5F 00 62 00 75 00 6E 00 6B 00 65 00 72", 1)
+        gg.clearResults()
+        gg.toast("INVISIBLE WALL DISACTIVATED ❌")
+        GLOOWALL = "🔴⃢    "
+    end
+end
+
+a = ' [ OFF ] '
+
+function a6()
+    gg.setVisible(false)
+    while true do
+        if gg.isVisible() then
+            gg.setVisible(false)
+            local savedItems = gg.getListItems()  
+
+            if a == ' [ OFF ] ' then
+gg.setRanges(32)
+        gg.searchNumber("h 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 80 BF 00 00 00 00 00 00 80 BF 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 80 BF 00 00 80 7F 00 00 80 7F 00 00 80 7F 00 00 80 FF", 1)
+        gg.getResults(gg.getResultsCount())
+        gg.editAll("h 00 00 00 00 00 80 40 00 00 00 00 00 00 00 00 00 00 80 BF 00 00 00 00 00 00 80 BF 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 80 BF 00 00 80 7F 00 00 80 7F 00 00 80 7F 00 00 80 FF", 1)
+        gg.clearResults()
+           gg.toast("LEFT CAMERA ✔️")
+                a = ' [ ON ] '
+            elseif a == ' [ ON ] ' then
+                gg.toast("LEFT CAMERA ❎")
+                
+gg.setRanges(32)
+        gg.searchNumber("h 00 00 00 00 00 80 40 00 00 00 00 00 00 00 00 00 00 80 BF 00 00 00 00 00 00 80 BF 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 80 BF 00 00 80 7F 00 00 80 7F 00 00 80 7F 00 00 80 FF", 1)
+        gg.getResults(gg.getResultsCount())
+        gg.editAll("h 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 80 BF 00 00 00 00 00 00 80 BF 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 80 BF 00 00 80 7F 00 00 80 7F 00 00 80 7F 00 00 80 FF", 1)
+        gg.clearResults()
+
+                a = ' [ OFF ] '
+            end
+        end
+    end
+end
+
+function a7()
+    gg.alert("EXIT DONE")
     gg.clearResults()
-  end
-  if SCRIPT_BASE_VIP == 1 then
-    MENU_INICIO()
-  end
-  SCRIPT_BASE_VIP = -1
+    os.exit()
+end
+while true do
+    if gg.isVisible(true) then
+        XGCK = 1
+        gg.setVisible(false)
+    end
+    if XGCK == 1 then
+        main()
+    end
 end
