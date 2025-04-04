@@ -1,4 +1,4 @@
-gg.toast("\🛡BYPASS 10% ANTIBAN║▓░░░░░░░░║")
+gg.toast("\n🛡BYPASS 10% ANTIBAN║▓░░░░░░░░║")
 gg.sleep(100)
 gg.toast("\n🛡BYPASS 20% ANTIBAN║▓▓░░░░░░░║")
 gg.sleep(200)
@@ -76,33 +76,6 @@ function LibAutoLibil2cpp(A0_8, A1_9)
       gg.setValues(_rw)
     end
   end
-
------(cdn-settings.appsflyersdk.com
-dl.aw.freefiremobile.com
-dl-us-production.freefiremobile.com
-dl.verus.freefiremobile.com
-version.ffmax.purplevioleto.com
-client.us.freefiremobile.com
-intlsdk.iegg.garena.com
-cloudctrl.gcloudsdk.com
-glcs.listdl.com
-dl.cvs.freefiremobile.com
-conversions.appsflyer.com
-inapps.appsflyer.com
-dl-sg-production.freefiremobile.com
-gin.freefiremobile.com
-launches.appsflyer.com
-dl.castle.freefiremobile.com
-dl.dir.freefiremobile.com
-bdversion.ggbluefox.com
-freefiremobile-a.akamaihd.net
-csoversea.stronghold.freefiremobile.com
-dl.listdl.com
-ff.dr.grtc.garenanow.com
-dl.tata.freefiremobile.com
-ff.sdk.grtc.garenanow.com
-gcloudcs.com
-bdversion.ggbluefox.com)
 
 
 
@@ -220,12 +193,12 @@ gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_CODE_APP)
 gg.searchNumber("h 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 80 BF 00 00 00 00 00 00 80 BF 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 80 BF 00 00 80 7F 00 00 80 7F 00 00 80 7F 00 00 80 FF", gg.TYPE_BYTE)
 t1 = gg.getResults(gg.getResultsCount())
 gg.setValues(t1)
-gg.editAll("h 00 00 00 00 22 8E C3 40 00 00 00 00 00 00 00 00 00 00 80 BF 00 00 00 00 00 00 80 BF 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 80 BF 00 00 80 7F 00 00 80 7F 00 00 80 7F 00 00 80 FF", gg.TYPE_BYTE)
+gg.editAll("h 00 00 00 00 00 00 FF 41 00 00 00 00 00 00 00 00 00 00 80 BF 00 00 00 00 00 00 80 BF 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 FF 41 00 00 00 00 00 00 00 00 00 00 80 BF 00 00 80 7F 00 00 80 7F 00 00 80 7F 00 00 80 FF", gg.TYPE_BYTE)
 gg.clearResults()
 GHOST = on
 elseif GHOST == on  then  
 gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_CODE_APP)
-gg.searchNumber("h 00 00 00 00 22 8E C3 40 00 00 00 00 00 00 00 00 00 00 80 BF 00 00 00 00 00 00 80 BF 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 80 BF 00 00 80 7F 00 00 80 7F 00 00 80 7F 00 00 80 FF", gg.TYPE_BYTE)
+gg.searchNumber("h 00 00 00 00 00 00 FF 41 00 00 00 00 00 00 00 00 00 00 80 BF 00 00 00 00 00 00 80 BF 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 FF 41 00 00 00 00 00 00 00 00 00 00 80 BF 00 00 80 7F 00 00 80 7F 00 00 80 7F 00 00 80 FF", gg.TYPE_BYTE)
 t1 = gg.getResults(gg.getResultsCount())
 gg.setValues(t1)
 gg.editAll("h 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 80 BF 00 00 00 00 00 00 80 BF 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 80 BF 00 00 80 7F 00 00 80 7F 00 00 80 7F 00 00 80 FF", gg.TYPE_BYTE)
@@ -283,3 +256,4 @@ while true do
   end
   SCRIPT_BASE_VIP = -1
 end
+
